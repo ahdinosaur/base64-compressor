@@ -1,0 +1,2 @@
+const{CompressionStream:a,DecompressionStream:p,Response:s}=globalThis;async function m(r,e="gzip"){const o=new a(e),n=new s(r).body?.pipeThrough(o);return await new s(n).arrayBuffer()}async function t(r,e="gzip"){const o=new p(e),n=new s(r).body?.pipeThrough(o);return await new s(n)}async function i(r,e="gzip"){return(await t(r,e)).arrayBuffer()}async function f(r,e="gzip"){return(await t(r,e)).text()}export{m as compress,i as decompress,i as decompressAsArrayBuffer,f as decompressAsString};
+//# sourceMappingURL=compress.js.map
